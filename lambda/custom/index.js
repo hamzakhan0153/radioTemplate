@@ -7,15 +7,15 @@ const Alexa = require('ask-sdk-core');
 const STREAMS = [
   {
     'token': 'dabble-radio-1',
-    'url': 'https://stream.zeno.fm/efe91skxn18uv.m3u',
+    'url': 'https://ice25.securenetsystems.net/WHPI',
     'metadata': {
-      'title': 'Dabble Radio',
-      'subtitle': 'Music for coders',
+      'title': 'Shuffle Radio',
+      'subtitle': 'We play everything - in no particular order',
       'art': {
         'sources': [
           {
-            'contentDescription': 'Dabble Radio',
-            'url': 'https://s3.amazonaws.com/cdn.dabblelab.com/img/audiostream-starter-512x512.png',
+            'contentDescription': 'Shuffle Radio',
+            'url': 'https://shuffleradio.com/wp-content/themes/2024Shuffle/alexa/shuffle-logo-nf.jpg',
             'widthPixels': 512,
             'heightPixels': 512,
           },
@@ -24,8 +24,8 @@ const STREAMS = [
       'backgroundImage': {
         'sources': [
           {
-            'contentDescription': 'Dabble Radio',
-            'url': 'https://s3.amazonaws.com/cdn.dabblelab.com/img/wayfarer-on-beach-1200x800.png',
+            'contentDescription': 'Shuffle Radio',
+            'url': 'https://shuffleradio.com/wp-content/themes/2024Shuffle/alexa/shuffle-logo-nf.jpg',
             'widthPixels': 1200,
             'heightPixels': 800,
           },
@@ -83,7 +83,7 @@ const AboutIntentHandler = {
       && handlerInput.requestEnvelope.request.intent.name === 'AboutIntent';
   },
   handle(handlerInput) {
-    const speechText = 'This is an audio streaming skill that was built with a free template from skill templates dot com';
+    const speechText = 'This is Shuffle Radio Stream';
 
     return handlerInput.responseBuilder
       .speak(speechText)
